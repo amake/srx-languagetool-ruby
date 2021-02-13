@@ -5,3 +5,6 @@ AllCops:
 
 Layout/LineLength:
   Max: 120
+  Exclude:
+    - 'test/golden_rules_test.rb'
+    - 'test/languagetool_rules_test.rb'
