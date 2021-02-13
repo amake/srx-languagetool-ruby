@@ -8,17 +8,14 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Aaron Madlon-Kay"]
   spec.email         = ["aaron@madlon-kay.com"]
 
-  spec.summary       = "TODO: Write a short summary, because RubyGems requires one."
-  spec.description   = "TODO: Write a longer description or delete this line."
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = "SRX segmentation rules from LanguageTool"
+  spec.homepage      = "https://github.com/amake/srx-languagetool-ruby"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.4.0")
 
-  spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
-
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "TODO: Put your gem's public repo URL here."
-  spec.metadata["changelog_uri"] = "TODO: Put your gem's CHANGELOG.md URL here."
+  spec.metadata["source_code_uri"] = "https://github.com/amake/srx-languagetool-ruby.git"
+  spec.metadata["changelog_uri"] = "https://github.com/amake/srx-languagetool-ruby/blob/master/CHANGELOG.md"
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
