@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative "languagetool/version"
+require_relative 'languagetool/version'
 
 module Srx
   module Languagetool
