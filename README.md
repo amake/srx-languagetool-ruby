@@ -29,7 +29,7 @@ For detailed usage information, please see
 [srx-ruby](https://github.com/amake/srx-ruby).
 
 ```ruby
-require 'srx'
+require 'srx-languagetool'
 
 data = Srx::Data.languagetool
 engine = Srx::Engine.new(data)
