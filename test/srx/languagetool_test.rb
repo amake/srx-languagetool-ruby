@@ -8,8 +8,8 @@ module Srx
       refute_nil ::Srx::Languagetool::VERSION
     end
 
-    def test_it_does_something_useful
-      assert false
+    def test_languagetool
+      refute_nil(Data.languagetool)
     end
   end
 end
