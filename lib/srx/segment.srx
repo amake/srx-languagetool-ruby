@@ -6599,6 +6599,9 @@
 <languagemap languagepattern="(BE|be).*" languagerulename="Belarusian"></languagemap>
 <languagemap languagepattern="(GL|gl).*" languagerulename="Galician"></languagemap>
 <languagemap languagepattern="(JA|ja).*" languagerulename="Japanese"></languagemap>
+<!-- Modification: Japanese rules work well for Chinese; keep original name to
+     minimize diff -->
+<languagemap languagepattern="(ZH|zh).*" languagerulename="Japanese"></languagemap>
 <languagemap languagepattern="(BR|br).*" languagerulename="Breton"></languagemap>
 <languagemap languagepattern="(PT|pt).*" languagerulename="Portuguese"></languagemap>
 <languagemap languagepattern="(IT|it).*" languagerulename="Italian"></languagemap>
