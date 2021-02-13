@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = 'SRX segmentation rules from LanguageTool'
   spec.homepage      = 'https://github.com/amake/srx-languagetool-ruby'
-  spec.license       = 'MIT'
+  spec.license       = 'LGPL-2.1'
   spec.required_ruby_version = Gem::Requirement.new('>= 2.4.0')
 
   spec.metadata['homepage_uri'] = spec.homepage
