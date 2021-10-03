@@ -67,7 +67,11 @@ class LanguageToolRulesTest < Minitest::Test
     assert_split('It really[!] works well.')
     assert_split("A test.\u00A0\n", 'Another test.')
     # try to deal with at least some nbsp that appear in strange places (e.g. Google Docs, web editors)
-    assert_split("A test.\u00A0Another test."); # not clear whether this is the best behavior...
+    assert_split("A test.\u00A0", 'Another test.') # not clear whether this is the best behavior...
+    assert_split("A test.\n", 'Another test.')
+    assert_split("A test. \n", 'Another test.')
+    assert_split("A test. \n", "\n", 'Another test.')
+    assert_split(%("Here he comes."\u00a0), 'But this is another sentence.')
 
     assert_split('The new Yahoo! product is nice.')
     assert_split('Yahoo!, what is it?')
@@ -156,7 +160,7 @@ class LanguageToolRulesTest < Minitest::Test
     text = sentences.join
     assert_equal(
       sentences,
-      engine.segment(text, language: @lang_code)
+      engine.segment(text, language: "#{@lang_code}_one")
     )
   end
 
