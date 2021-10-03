@@ -1,5 +1,10 @@
 ## [Unreleased]
 
+## [0.4.0] - 2021-10-03
+
+- Update rules to LanguageTool 5.5
+- Document `_one` and `_two` language suffixes (see README)
+
 ## [0.3.0] - 2021-06-26
 
 - Update rules to LanguageTool 5.4
