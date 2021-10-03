@@ -25,7 +25,7 @@ Or install it yourself as:
 
 ## Usage
 
-For detailed usage information, please see
+For detailed usage information about the engine, please see
 [srx-ruby](https://github.com/amake/srx-ruby).
 
 ```ruby
@@ -34,6 +34,18 @@ require 'srx/languagetool'
 data = Srx::Data.languagetool
 engine = Srx::Engine.new(data)
 engine.segment('Hi. How are you?', language: 'en') #=> ["Hi.", " How are you?"]
+```
+
+**Note:** To split on single line breaks, append the suffix `_one` to the
+language. To split only on two or more consecutive line breaks, append `_two`.
+
+```ruby
+engine.segment("Hi. \n\n\nHow are you?", language: 'en')
+#=> ["Hi. \n\n\nHow are you?"]
+engine.segment('Hi. \n\n\nHow are you?', language: 'en_one')
+#=> ["Hi. \n", "\n", "\n", "How are you?"]
+engine.segment('Hi. \n\n\nHow are you?', language: 'en_two')
+#=> ["Hi. \n\n\n", "How are you?"]
 ```
 
 ## Development
