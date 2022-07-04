@@ -10,10 +10,10 @@ jobs:
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: 2.7.5
+        ruby-version: 2.7.6
     - name: Install
       run: |
-        gem install bundler -v 2.3.10
+        gem install bundler -v 2.3.17
         bundle install
     - name: Type check
       run: bundle exec solargraph typecheck --level typed
