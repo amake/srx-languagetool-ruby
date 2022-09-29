@@ -1159,7 +1159,7 @@
 <afterbreak>D\.?</afterbreak>
 </rule>
 <rule break="no"><!-- min. -->
-<beforebreak>\b([Aa]vg|[Ee]d|pp|[Vv]iz|i\.?[\s\u00A0]*e|[Vvol]|[Rr]col|maj|Lt|[Ff]ig|[Ff]igs|[Vv]iz|[Vv]ols|[Aa]pprox|[Ii]ncl?|[Aa]cc|Pres|[Cc]orp|[Ee]x|[Cc]onn|[Dd]ept|[Ll]tda|[Mm]in|[Mm]ax|[Gg]ovt|[Rr]etd|lb|lbf|ft|c\.?[\s\u00A0]*f|vs|dia|lbs|\d+-(:?oz|kc|in|h[rp]|ml)|M?sec)\.[\s\u00A0]</beforebreak>
+<beforebreak>\b([Aa]vg|[Ee]d|pp|[Vv]iz|i\.?[\s\u00A0]*e|[Vvol]|[Rr]col|maj|Lt|[Ff]ig|[Ff]igs|[Vv]iz|[Vv]ols|[Aa]pprox|[Ii]ncl?|[Aa]cc|Pres|[Cc]orp|[Ee]x|[Cc]onn|[Dd]ept|[Ll]tda|[Mm]in|[Mm]ax|[Gg]ovt|[Rr]etd|Ing|lb|lbf|ft|c\.?[\s\u00A0]*f|vs|dia|lbs|\d+-(:?oz|kc|in|h[rp]|ml)|M?sec)\.[\s\u00A0]</beforebreak>
 <afterbreak>[^\p{Lu}]|I</afterbreak>
 </rule>
 <rule break="no"><!-- hr. -->
@@ -1553,6 +1553,10 @@
 <beforebreak>\b[A-Za-z0-9\-]+\.</beforebreak>
 <afterbreak>[A-Za-z0-9\-]+\.(com|net|org|info|de|es|edu|co|eu|nl|io|cn|uk|gov|biz|ca|tk|ru|br|jp|pl)(\.|\b)</afterbreak>
 </rule>
+<rule break="no"><!-- Abbreviated books of the Bible and biblical apocrypha-->
+<beforebreak>\b(Ge?n|Ex|Le?v|Nu?m|D(eu)?t|Jo?z|Ri|R[ei]cht|Sa?m|Ko?n|Kr[on]{0,2}|Neh?|Est?|Jb|Ps|Spr?|Pr[ed]{0,2}|H(oog)?l|Je?s|Je?r|Kl(aagl)?|Ez(ech)?|Da?n|Ho?s|Jl|Am|Ob|Mc|Mi[ch]{0,2}|Nah?|Hk|Hab|Zf|[SZ]ef|Ha?g|Zc|Zach|Ma?l|Ma?t|Mk|Mar|Lk|Jh|H(an)?d|Ro?m|Kor|Ga?l|Ef|Fp|Fil|Ko|[CK]ol|Th|Th?e[s]{1,2}|Tm|Ti?t|Fm|Fil(em)?|Hb|Hebr?|Jk|Ja[ck]|Pe?tr?|Joh|Jud|Op(enb)?|Wijsh|Tob|Sir|Bar|Makk)\.\s</beforebreak>
+<afterbreak></afterbreak>
+</rule>
 <rule break="no">
 <beforebreak>\b(Drs|Art|Afr|Am|Ar|Br|Cie|Comp|Dhr|([Pp]rof\.)?[Dd]r|Em|Fa|Kon|Bros|Stb)\.\s</beforebreak>
 <afterbreak></afterbreak>
@@ -1578,7 +1582,7 @@
 <afterbreak></afterbreak>
 </rule>
 <rule break="no">
-<beforebreak>\b(arch|archeol|art|bc|betr|bez|bibl|bijl|bijv)\.\s</beforebreak>
+<beforebreak>\b(arch|archeol|art|bc|bep|betr|bez|bibl|bijl|[Bb]ijv)\.\s</beforebreak>
 <afterbreak></afterbreak>
 </rule>
 <rule break="no">
@@ -1590,15 +1594,15 @@
 <afterbreak></afterbreak>
 </rule>
 <rule break="no">
-<beforebreak>\b(ed|em|enz|etc|ev|excl|fa|fam|fig|fl|fr.)\.\s</beforebreak>
+<beforebreak>\b(ed|em|enz|etc|ev|[Ee]xcl|fa|fam|fig|fin|fl|fr.)\.\s</beforebreak>
 <afterbreak></afterbreak>
 </rule>
 <rule break="no">
-<beforebreak>\b(geb|get|gld|id|incl|ing|intern|ir|jhr|jkvr)\.\s</beforebreak>
+<beforebreak>\b(geb|[Gg]em|get|gld|id|[Ii]ncl|ind|inf|ing|intern|inz|ir|jhr|jkvr)\.\s</beforebreak>
 <afterbreak></afterbreak>
 </rule>
 <rule break="no">
-<beforebreak>\b(jl|jr|kr|kt|lab|lic|ll|lt|lw|max|mi|min|mld)\.\s</beforebreak>
+<beforebreak>\b(jl|jr|kr|kt|lab|lic|ll|lt|lw|max|mevr|mi|[Mm]in|mld)\.\s</beforebreak>
 <afterbreak></afterbreak>
 </rule>
 <rule break="no">
@@ -1606,11 +1610,11 @@
 <afterbreak></afterbreak>
 </rule>
 <rule break="no">
-<beforebreak>\b(opm|org|ov|pag|par|penn|plm|plv)\.\s</beforebreak>
+<beforebreak>\b(opm|org|ov|pag|par|penn|([1-3][\.e]?)[\s]?pers|plm|plv)\.\s</beforebreak>
 <afterbreak></afterbreak>
 </rule>
 <rule break="no">
-<beforebreak>\b(prov|pseud|qty|red|ref|resp|soc|st|tab|tel|temp|tk)\.\s</beforebreak>
+<beforebreak>\b(prov|pseud|psych|qty|red|ref|resp|soc|st|tab|tel|temp|tk)\.\s</beforebreak>
 <afterbreak></afterbreak>
 </rule>
 <rule break="no">
@@ -1622,7 +1626,7 @@
 <afterbreak>Chr</afterbreak>
 </rule>
 <rule break="no">
-<beforebreak>\b(uitsl|ver|vgl|vnl|vnw|voorz|ww|zat|zg)\.\s</beforebreak>
+<beforebreak>\b(uitsl|ver|vgl|vnl|vnw|voorz|ww|zat|[Zz]elfst|zgn?)\.\s</beforebreak>
 <afterbreak></afterbreak>
 </rule>
 <rule break="no">
@@ -4373,7 +4377,7 @@
 <afterbreak>\p{Ll}</afterbreak>
 </rule>
 <rule break="no">
-<beforebreak>\b(уд|ул|уч|физ|х|хор|э)\.\s</beforebreak>
+<beforebreak>\b(уд|ул|уч|физ|х|хор|э|Эл|эл)\.\s</beforebreak>
 <afterbreak></afterbreak>
 </rule>
 <rule break="no">
@@ -4717,6 +4721,12 @@
 </rule>
 </languagerule>
 <languagerule languagerulename="Spanish">
+
+<rule break="no">
+<beforebreak>¿[^?]+:[\s\u00A0]</beforebreak>
+<afterbreak>.</afterbreak>
+</rule>
+
 <rule break="no">
 <beforebreak>Yahoo![\s\u00A0]</beforebreak>
 <afterbreak>\p{Ll}</afterbreak>
@@ -4798,7 +4808,7 @@
 </rule>
 <!-- Abbreviations that can finish sentences -->
 <rule break="no">
-<beforebreak>\b([Ee]ds?|[Cc]oords?|grs?|Sr|Jr|Admón|Inc|Co|Hnos|Vda|[VU]d[s]?)\.[\p{Pe}\p{Pf}\p{Pd}"']*[\s\u00A0]</beforebreak>
+<beforebreak>\b([Ee]ds?|[Cc]oords?|grs?|Sr|Jr|Admón|Inc|Co|Hnos|Vda|[VUuv]d[s]?)\.[\p{Pe}\p{Pf}\p{Pd}"']*[\s\u00A0]</beforebreak>
 <afterbreak>[\-¡¿«»"'\u2018\u201C\p{Ps}\u2012\u2013\u2014\u2015\u2053]*\p{Ll}</afterbreak>
 </rule>
 <!-- Any word in acronyms like U.S.A.F or F. B. I. or C. or c.s.p. or p. e. -->
@@ -4864,13 +4874,17 @@
 </rule>
 <!-- Split at e.g. "1a. Und ..." -->
 <rule break="yes">
-<beforebreak>\d+[a-z]\.[\u00A0\s]</beforebreak>
+<beforebreak>\d+[a-z]\.[\u00A0\s]{1,2}</beforebreak>
 <afterbreak>\p{Lu}</afterbreak>
 </rule>
 <!-- Don't split at e.g. "d. h." -->
 <rule break="no">
-<beforebreak>[^-\p{L}'’/]\p{L}[\.!?…]['|"|“|«|\)|\]|\}]?[\u00A0\s]</beforebreak>
+<beforebreak>[^-\p{L}'’/°]\p{L}[\.!?…]['|"|“|«|\)|\]|\}]?[\u00A0\s]</beforebreak>
 <afterbreak></afterbreak>
+</rule>
+<rule break="no"><!-- special case: "Das 1. Internationale Filmfestival findet nächste Woche statt." -->
+<beforebreak>([Dd](as|er|ie|iese[rsmn]?|en|em)|[kmsd]?ein(e[rsnm]?)?|am|fürs|ins|zum|im|am|zur) \d+\.[\u00A0\s]+</beforebreak>
+<afterbreak>[A-ZÄÖÜ].*</afterbreak>
 </rule>
 <rule break="no">
 <beforebreak>Ust.</beforebreak><!-- needed for German rule UST_ID -->
@@ -4893,11 +4907,11 @@
 <afterbreak>3|4|Buzz|Crozz</afterbreak>
 </rule>
 <rule break="no">
-<beforebreak>[1-3]\.[\u00A0\s]</beforebreak>
+<beforebreak>[1-3]\.[\u00A0\s]{1,2}</beforebreak>
 <afterbreak>Liga|Bundesliga|(Fußball|Handball|Basketball)(-B|b)undesliga</afterbreak>
 </rule>
 <rule break="no">
-<beforebreak>\d+\.[\u00A0\s]</beforebreak>
+<beforebreak>\d+\.[\u00A0\s]{1,2}</beforebreak>
 <afterbreak>Klässler[sn]?</afterbreak>
 </rule>
 <rule break="no">
@@ -4912,43 +4926,43 @@
 <!-- Don't split after a white-space followed by a single letter followed
          by a dot followed by another whitespace. e.g. " p. " -->
 <rule break="no">
-<beforebreak>[\u00A0\s]\p{L}\.[\u00A0\s]</beforebreak>
+<beforebreak>[\u00A0\s]\p{L}\.[\u00A0\s]{1,2}</beforebreak>
 <afterbreak>\p{L}\.</afterbreak>
 </rule>
 <!-- Don't split at "bla bla... yada yada" -->
 <rule break="no">
-<beforebreak>[\[\(]?\.\.\.[\]\)]?[\u00A0\s]</beforebreak>
+<beforebreak>[\[\(]?\.\.\.[\]\)]?[\u00A0\s]{1,2}</beforebreak>
 <afterbreak>\p{Ll}</afterbreak>
 </rule>
 <!-- Don't split [.?!] when they're quoted -->
 <rule break="no">
-<beforebreak>['"„][\.!?…]['"“«»][\u00A0\s]</beforebreak>
+<beforebreak>['"„][\.!?…]['"“«»][\u00A0\s]{1,2}</beforebreak>
 <afterbreak></afterbreak>
 </rule>
 <!-- Don't break after quote unless there's a capital letter
          e.g.: "That's right!" he said. -->
 <rule break="no">
-<beforebreak>["'“«»][\u00A0\s]</beforebreak>
+<beforebreak>["'“«»][\u00A0\s]{1,2}</beforebreak>
 <afterbreak>\p{Ll}</afterbreak>
 </rule>
 <!-- e.g. "Das ist . so." - assume one sentence. -->
 <rule break="no">
-<beforebreak>[\u00A0\s]([\.!?]{1,3}|…)['|"|“|«|\)|\]|\}]?[\u00A0\s]</beforebreak>
+<beforebreak>[\u00A0\s]([\.!?]{1,3}|…)['|"|“|«|\)|\]|\}]?[\u00A0\s]{1,2}</beforebreak>
 <afterbreak></afterbreak>
 </rule>
 <!-- Numbers, dates e.g. "3.10. datiert" -->
 <rule break="no">
-<beforebreak>\b\d+\.[\u00A0\s]</beforebreak>
+<beforebreak>\b\d+\.[\u00A0\s]{1,2}</beforebreak>
 <afterbreak>\p{Ll}|\p{Lu}{2,}</afterbreak>
 </rule>
 <!-- z.B. "Das hier ist ein(!) Satz." -->
 <rule break="no">
-<beforebreak>[\(\[][!?]{1,3}[\]\)][\u00A0\s]</beforebreak>
+<beforebreak>[\(\[][!?]{1,3}[\]\)][\u00A0\s]{1,2}</beforebreak>
 <afterbreak></afterbreak>
 </rule>
 <!-- z.B. "Das hier ist (genau!) ein Satz." -->
 <rule break="no">
-<beforebreak>[!?]{1,3}[\)\]][\u00A0\s]</beforebreak>
+<beforebreak>[!?]{1,3}[\)\]][\u00A0\s]{1,2}</beforebreak>
 <afterbreak></afterbreak>
 </rule>
 <!-- z.B. "bla (...) blubb" -> kein Satzende -->
@@ -4958,55 +4972,55 @@
 </rule>
 <!-- don't split at cases like "Friedrich II. wird auch..." -->
 <rule break="no">
-<beforebreak>[\u00A0\s ][IVX]+\.[\u00A0\s]</beforebreak>
+<beforebreak>[\u00A0\s ][IVX]+\.[\u00A0\s]{1,2}</beforebreak>
 <afterbreak>[^\p{Lu}]+</afterbreak>
 </rule>
 <!-- don't split at cases like "im 13. oder 14. Jahrhundert" -->
 <rule break="no">
-<beforebreak>\d+\.[\u00A0\s]</beforebreak>
+<beforebreak>\d+\.[\u00A0\s]{1,2}</beforebreak>
 <afterbreak>(und|oder|bis)[\u00A0\s]</afterbreak>
 </rule>
 <!-- einige deutsche Monate, vor denen eine Zahl erscheinen kann,
          ohne dass eine Satzgrenze erkannt wird
          (z.B. "am 13. Dezember" -> keine Satzgrenze) -->
 <rule break="no">
-<beforebreak>\d+\.[\u00A0\s]</beforebreak>
+<beforebreak>\d+\.[\u00A0\s]{1,2}</beforebreak>
 <afterbreak>Januar|Jänner|Februar|März|Merz|April|Mai|Ju[ln]i|August|September|Oktober|November|Dezember</afterbreak>
 </rule>
 <rule break="no">
-<beforebreak>\d+\.[\u00A0\s]</beforebreak>
+<beforebreak>\d+\.[\u00A0\s]{1,2}</beforebreak>
 <afterbreak>J[aä]n|Febr?|Mär|Apr|Mai|Ju[nl]|Aug|Sept?|Okt|Nov|Dez</afterbreak>
 </rule>
 <rule break="no">
-<beforebreak>(Jan|Jän|Febr?|Mär|Apr|Mai|Ju[nl]|Aug|Sept?|Okt|Nov|Dez)\.[\u00A0\s]</beforebreak>
+<beforebreak>(Jan|Jän|Febr?|Mär|Apr|Mai|Ju[nl]|Aug|Sept?|Okt|Nov|Dez)\.[\u00A0\s]{1,2}</beforebreak>
 <afterbreak>\d\d(\d\d)?</afterbreak>
 </rule>
 <!-- ähnliche Fälle außerhalb der Monatsnamen -->
 <rule break="no">
-<beforebreak>\d+\.[\u00A0\s]</beforebreak>
+<beforebreak>\d+\.[\u00A0\s]{1,2}</beforebreak>
 <afterbreak>Amtsperiode|Breitengrads?|Breitengrades|Jubiläum|Jhd?|Jhdts?|Konferenz|(Jahres|Partei)(-K|k)onferenz|Längengrade?s?|Tags?|Tages|(Jahres|Spiel|Partei|Geburts)tag|(Jahres|Spiel|Partei|Geburts)tages|(Jahres|Spiel|Partei|Geburts)tags|Jahrhunderts?|Jahrtausend|Platz|Platzes|Lebensjahrs?|Lebensjahres|Lochs?|Loches|Grads|Grades|Obergeschoss|Stock(werk)?s?|Etage|Klasse|Runde|Bezirk|Etappe|Staffel|Sinfonie</afterbreak>
 </rule>
 <!-- English abbreviations - but these work globally for all languages -->
 <rule break="no">
-<beforebreak>\b(Mrs?|No|pp|St|no|Sr|Jr|[Ss]ek|Bros|etc|[Bb]tw|vs|esp|[Ff]ig|Jan|Feb|Mar|Apr|Ju[nl]|Aug|Sept?|O[ck]t|Nov|Dec|PhD|BSc|BEng|BComp|BArch|al|cf|Inc|Ms|MEng|MSc|MComp|Gen|Sen|Prof|Corp|Co|co|Ltd|Buchst)\.[\u00A0\s]</beforebreak>
+<beforebreak>\b(Mrs?|No|pp|St|no|Sr|Jr|[Ss]ek|Bros|etc|[Bb]tw|vs|esp|[Ff]ig|Jan|Feb|Mar|Apr|Ju[nl]|Aug|Sept?|O[ck]t|Nov|Dec|PhD|BSc|BEng|BComp|BArch|al|cf|Inc|Ms|MEng|MSc|MComp|Gen|Sen|Prof|Corp|Co|co|Ltd|Buchst)\.[\u00A0\s]{1,2}</beforebreak>
 <afterbreak></afterbreak>
 </rule>
 <!-- Latin abbreviations - but these work globally for all languages -->
 <rule break="no">
-<beforebreak>\b(spp?)\.[\u00A0\s]</beforebreak>
+<beforebreak>\b(spp?)\.[\u00A0\s]{1,2}</beforebreak>
 <afterbreak></afterbreak>
 </rule>
 <!-- German abbreviations -->
 <rule break="no">
-<beforebreak>\b(betr|Geb|Stk|ggü|Mag|mtl|versch|d|Übers|usw|Bzw|bzw|Ab[hkst]|abzgl|[Ll]tda|[Ee]inschl|[Vv]mtl|Ev|bezgl|Abzw|[Vv]sl|ahd|Akk|aktual|allg|alltagsspr|altdt|alttest|amerikan|Anh|Ank|Anm|Art|autom|Auftragsnr|Az|Bat|bayr|Bde?|bearb|Bed|Bem|bes|bez|Bez|Bhf|bspw|btto|bw|Dtl|Dez)\.[\u00A0\s]</beforebreak>
+<beforebreak>\b(betr|Geb|Stk|ggü|Mag|mtl|versch|[Ss]tellv|d|Übers|usw|[Bb]zw|Ab[hkst]|[Aa]bzü?gl|[Ll]tda|[Ee]inschl|[Vv]mtl|Ev|bezgl|Abzw|[Vv]sl|ahd|Akk|aktual|allg|alltagsspr|altdt|alttest|amerikan|Anh|Ank|Anm|Art|[Aa]utom|Auftragsnr|Az|Bat|bayr|Bde?|bearb|Bed|Bem|bes|bez|Bez|Bhf|bspw|btto|bw|Dtl|Dez)\.[\u00A0\s]{1,2}</beforebreak>
 <afterbreak></afterbreak>
 </rule>
 <rule break="no">
-<beforebreak>\b(cts?|Ca|ca|chem|chin|Chr|cresc|dat|Dat|desgl|ders|dgl|Dipl|Dir?|Doz?|durchg|durchges|Dr|dt|ebd|Ed|eigtl|Eigtl|eigl|Eigl|akt|Engl|engl|Erg|al|et[cw]|Etw|ev(tl)?|Evtl|Evt|evt|exkl|Expl|Exz)\.[\u00A0\s]</beforebreak>
+<beforebreak>\b(cts?|[Cc]a|chem|chin|Chr|cresc|[Dd]at|desgl|ders|dgl|Dipl|Dir?|Doz?|durchg|durchges|Dr|dt|ebd|Ed|[Ee]igt?l|akt|[Ee]ngl|Erg|al|et[cw]|Etw|ev|[Ee]vtl?|exkl|Expl|Exz)\.[\u00A0\s]{1,2}</beforebreak>
 <afterbreak></afterbreak>
 </rule>
 <rule break="no">
-<beforebreak>\bDipl\.-[A-Z][a-z]{2,4}\.[\u00A0\s]</beforebreak>
+<beforebreak>\bDipl\.-[A-Z][a-z]{2,4}\.[\u00A0\s]{1,2}</beforebreak>
 <afterbreak></afterbreak>
 </rule>
 <rule break="no">
@@ -5014,23 +5028,27 @@
 <afterbreak>\p{Ll}</afterbreak>
 </rule>
 <rule break="no">
-<beforebreak>\b(ff|Fa|fachspr|fam|fem|Fem|Fr|franz|frz?|[Aa]ltfranz|frdl|Frl|Fut|Gd|gebr?|Gebr|geh|geleg|gen|Gen|germ|gesch|ges|get|ggf|Ggf|Ggs|ggT|Gr|[Gg]rds|griech)\.[\u00A0\s]</beforebreak>
+<beforebreak>\b(ff|Fa|fachspr|fam|fem|Fem|Fr|franz|frz?|[Aa]ltfranz|frdl|Frl|Fut|Gd|gebr?|Gebr|geh|geleg|gen|Gen|germ|gesch|ges|get|ggf|Ggf|Ggs|ggT|Gr|[Gg]rds|griech)\.[\u00A0\s]{1,2}</beforebreak>
 <afterbreak></afterbreak>
 </rule>
 <rule break="no">
-<beforebreak>\b(hebr|hg|hl|Hrsg|Hg|hist|hochd|hochspr|Hptst|Hr|hrsg|Allg|IdNr|ill|inkl|incl|Ind|Inf|Ing|ital|Tr|jap|Jb|Jg|Jhd?|Jhdts?|jmd[mns]?|jur|Kap|kart|kath|kfm|kaufm|Kfm|kgl|Kl|Konj|königl|Krs?|Kto)\.[\u00A0\s]</beforebreak>
+<beforebreak>\b(hebr|hg|hl|Hrsg|Hg|hist|hochd|hochspr|Hptst|Hr|hrsg|Allg|IdNr|ill|inkl|incl|Ind|Inf|Ing|ital|Tr|jap|Jb|Jg|Jhd?|Jhdts?|jmd[mns]?|jur|Kap|kart|kath|kfm|kaufm|Kfm|kgl|Kl|Konj|königl|Krs?|Kto)\.[\u00A0\s]{1,2}</beforebreak>
 <afterbreak></afterbreak>
 </rule>
 <rule break="no">
-<beforebreak>\b([A-ZÖÄÜ][a-zöäüß]+nr|tel|gem|Pat|prov|Betr|lat|lfd|Lit|lt|Lz|Mask|mask|max|Mrd|mdal|me[dt]|phil|mhd|Mio?|mind?|Mo|mod|nachm|nördlBr|neutr|Nhd|Nom|Nrn?|Num|Obj|od|dgl|offz)\.[\u00A0\s]</beforebreak>
+<beforebreak>\b([A-ZÖÄÜ][a-zöäüß]+nr|tel|[Gg]em|Pat|prov|Betr|lat|lfd|Lit|lt|Lz|Mask|mask|max|Mrd|mdal|me[dt]|phil|mhd|Mio?|mio|mind?|Mo|mod|nachm|nördlBr|neutr|Nhd|Nom|Nrn?|Num|Obj|od|dgl|offz)\.[\u00A0\s]{1,2}</beforebreak>
 <afterbreak></afterbreak>
 </rule>
 <rule break="no">
-<beforebreak>\b(Part|Per[fs]|Pfd|Pl(ur)?|pl|Plusq|Pos|pp|Prä[ps]|Prät|Pro[vf]|rd|reg|resp|Rhld|rit|Sa|südl|Br|se[ln]|Sept|Sing|sign|So|sog|Sp|Std?|stacc|Str|stud|Subst|sva|svw|sZ)\.[\u00A0\s]</beforebreak>
+<beforebreak>\b(Part|Per[fs]|Pfd|Pl(ur)?|pl|Plusq|Pos|pp|Prä[ps]|Prät|Pro[vf]|rd|reg|resp|Rhld|rit|Sa|südl|Br|se[ln]|Sept|Sing|sign|So|sog|Sp|Std?|stacc|Str|stud|Subst|sva|svw|sZ)\.[\u00A0\s]{1,2}</beforebreak>
 <afterbreak></afterbreak>
 </rule>
 <rule break="no">
-<beforebreak>\b(Tel|teilw|Temp|trans|Tsd|übertr|übl|ff|überarb|ugs|univ|unveränd|urspr|USt|UST|USt\-IdNr|[Aa][bn]schl|sw|kl|[Gg]r|vgl|vll|Vll|vlt|Vlt|vllt|Vllt|Vgl|Vol|vollst|vorm|Vp|Vs|vs|wesentl|wg|Whg|Hd|Ztr|zus|Zus|zzt?|zzgl|zB|zb|Zz|Zt|zw|Min|Bzgl|bzgl|bezügl|Frhr|ggfs|insb|autom|Mw[sS]t)\.[\u00A0\s]</beforebreak>
+<beforebreak>([A-ZÖÄÜ][a-zöäüß]+str)\.[\u00A0\s]{1,2}</beforebreak>
+<afterbreak>\p{Ll}</afterbreak>
+</rule>
+<rule break="no">
+<beforebreak>\b(Tel|teilw|Temp|trans|Tsd|übertr|übl|ff|überarb|ugs|univ|unveränd|urspr|USt|UST|USt\-IdNr|[Aa][bn]schl|sw|kl|[Gg]r|vgl|vll|Vll|vlt|Vlt|vllt|Vllt|Vgl|Vol|vollst|vorm|Vp|Vs|vs|wesentl|wg|Whg|Hd|Ztr|zus|Zus|zzt?|zzgl|zB|zb|Zz|Zt|zw|Min|Bzgl|bzgl|bezügl|Frhr|ggfs|insb|autom|Mw[sS]t)\.[\u00A0\s]{1,2}</beforebreak>
 <afterbreak></afterbreak>
 </rule>
 <!-- Break rules -->
@@ -5043,7 +5061,7 @@
 <afterbreak>\p{Lu}[^\p{Lu}]</afterbreak>
 </rule>
 <rule break="yes">
-<beforebreak>[\u00A0\s]\p{L}[\.!?…][\u00A0\s]</beforebreak>
+<beforebreak>[\u00A0\s]\p{L}[\.!?…][\u00A0\s]{1,2}</beforebreak>
 <afterbreak>\p{Lu}\p{Ll}</afterbreak>
 </rule>
 <!-- z.B. 2 sentences: “Liebst du mich?” “Ja!” -->
@@ -5262,6 +5280,18 @@
 <beforebreak>[\s\u00A0]</beforebreak>
 <afterbreak>[»”’"'›]</afterbreak>
 </rule>
+<rule break="no">
+<beforebreak>ambass|cuil|p|liv|assoc|bibl|ENREG|al|phot|circ|concl|deb|dest|dupl|éd|écon|incl?|ital|jur|juris|jurispr|larg|lex|législ|longit|(?-i)RR|(?-i)ÉÉm|(?-i)EExc|métr|méd|néol|obs|plur|préf|prog|publ|trib|trim|suiv|(?-i)LL|env|élem|ér|ét|hon|hypexp|conj|coop|ch|alph|anglic|app|pr|collab|paragr|sect|para|commiss|coord|dép|dir|gér|secour|sén|gén|abrév|adj|adr|anon|append|av|auj|bibl|bibliogr|bdc|boul|bull|bur|caar|cat|cell|chap|cir|compl|cf|corres|dest|dict|div|dom|dr|édif|éd|électr|élém|encycl|fig|fl|graph|hist|hyp|ill|imm|imp|impr|incl|inc|ind|in[gtvf]|jur|lat|litt|liq|loc|liv|livr|méd|mém|pl|réd|rel|sc|suiv|sup|suppl|trad|univ|mus|pharm|soc|pol|compt|urb|act|confect|exp|réal|prov|introd|inv|tial|enr|ép|équiv|esp|étym|excl|exc|ap|arr|arch|adv|al|anc|angl|ann|gest|gouv|prés|rect|représ|resp|scrut|vol|coll|réf|id|sqq?|janv|fév|avr|juill|oct|nov|déc|admin</beforebreak>
+<afterbreak>\p{Ll}.*</afterbreak>
+</rule>
+<rule break="no">
+<beforebreak>\p{Ll}.*</beforebreak>
+<afterbreak>ambass|cuil|p|liv|assoc|bibl|oct|déc|jan|fév|avr|juil|sept|nov|ENREG|al|circ|concl|deb|dest|dupl|éd|écon|incl?|ital|jur|juris|jurispr|larg|lex|législ|longit|(?-i)RR|(?-i)ÉÉm|(?-i)EExc|métr|méd|néol|obs|plur|préf|prog|publ|trib|trim|suiv|(?-i)LL|env|élem|ér|ét|hon|hypexp|conj|coop|ch|alph|anglic|app|pr|collab|paragr|sect|para|commiss|coord|dép|dir|gér|secour|sén|gén|abrév|adj|adr|anon|append|av|auj|bibl|bibliogr|bdc|boul|bull|bur|caar|cat|cell|chap|cir|compl|cf|corres|dest|dict|div|dom|dr|édif|éd|électr|élém|encycl|fig|fl|graph|hist|hyp|ill|imm|imp|impr|incl|inc|ind|in[gtvf]|jur|lat|litt|liq|loc|liv|livr|méd|mém|pl|réd|rel|sc|suiv|sup|suppl|trad|univ|mus|pharm|soc|pol|compt|urb|act|confect|exp|réal|prov|introd|inv|tial|enr|ép|équiv|esp|étym|excl|exc|ap|arr|arch|adv|al|anc|angl|ann|gest|gouv|prés|rect|représ|resp|scrut|vol|coll|réf|id|sqq?|janv|fév|avr|juill|oct|nov|déc|admin</afterbreak>
+</rule>
+<rule break="no">
+<beforebreak>.*°C</beforebreak>
+<afterbreak>de</afterbreak>
+</rule>
 <rule break="yes">
 <beforebreak>[\.!?][\s\u00A0][»”’"'›][\s\u00A0]</beforebreak>
 <afterbreak>[«“‘‹"'\p{Lu}]</afterbreak>
@@ -5270,7 +5300,7 @@
 <beforebreak>Yahoo![\s\u00A0]</beforebreak>
 <afterbreak>\p{Ll}</afterbreak>
 </rule>
-<!-- !? + lowercase -->  
+<!-- !? + lowercase -->
 <rule break="no">
 <beforebreak>(\!|\?)[\s\u00A0]</beforebreak>
 <afterbreak>\p{Ll}</afterbreak>
@@ -5648,7 +5678,7 @@
 </rule>
 <!-- abbreviation with proper noun: проф. Грицько, о. Лісове -->
 <rule break="no">
-<beforebreak>\b([Аа]кад|[Пп]роф|[Дд]оц|[Аа]сист|[Рр]еж|[Аа]рх|[Сс]вв?|о|ім|упоряд|чл\.-кор|[Пп]реп)\.[\h\v]*</beforebreak>
+<beforebreak>\b(ап|[Аа]кад|[Пп]роф|[Дд]оц|[Аа]сист|[Рр]еж|[Аа]рх|[Сс]вв?|о|оз|ім|інж|упоряд|чл\.-кор|[Пп]реп)\.[\h\v]*</beforebreak>
 <afterbreak>[\h\v]*[А-ЯІЇЄҐA-Z]</afterbreak>
 </rule>
 <rule break="no">
@@ -5996,7 +6026,7 @@
 </rule>
 <!-- Abbreviations that cannot finish sentences-->
 <rule break="no">
-<beforebreak>\b(a|Ab|abrev|absol|acad|Açor|A\. ?D|add|adj|adv|advers|Aeron|afér|Agric|Álg|aprox|[Aa]rts?|Artilh|auxil|av|Av)\.\s?</beforebreak>
+<beforebreak>\b(a|Ab|abr|abrev|absol|acad|Açor|A\. ?D|add|adj|adv|advers|Aeron|afér|Agric|ago|Álg|aprox|[Aa]rts?|Artilh|auxil|av|Av)\.\s?</beforebreak>
 <afterbreak></afterbreak>
 </rule>
 <rule break="no">
@@ -6008,7 +6038,7 @@
 <afterbreak></afterbreak>
 </rule>
 <rule break="no">
-<beforebreak>\b(D|def|dem|deprec|deriv|det|disj|[Dd]ra?s?)\.\s?</beforebreak>
+<beforebreak>\b(D|def|dem|deprec|deriv|det|dez|disj|[Dd]ra?s?)\.\s?</beforebreak>
 <afterbreak></afterbreak>
 </rule>
 <rule break="no">
@@ -6020,7 +6050,7 @@
 <afterbreak>\p{Ll}</afterbreak>
 </rule>
 <rule break="no">
-<beforebreak>\b(f|fam|Farm|fem|fig|fin|fl|fr|frac)\.\s?</beforebreak>
+<beforebreak>\b(f|fam|Farm|fem|fev|fig|fin|fl|fr|frac)\.\s?</beforebreak>
 <afterbreak></afterbreak>
 </rule>
 <rule break="no">
@@ -6036,7 +6066,7 @@
 <afterbreak></afterbreak>
 </rule>
 <rule break="no">
-<beforebreak>\b(Jorn|Jur)\.\s?</beforebreak>
+<beforebreak>\b(jan|jul|jun|Jorn|Jur)\.\s?</beforebreak>
 <afterbreak></afterbreak>
 </rule>
 <rule break="no">
@@ -6044,15 +6074,15 @@
 <afterbreak></afterbreak>
 </rule>
 <rule break="no">
-<beforebreak>\b(m|masc|Mat|máx|Mecân|[Mm]ed|Mil|mín|mult|Mús)\.\s?</beforebreak>
+<beforebreak>\b(m|mai|mar|masc|Mat|máx|Mecân|[Mm]ed|Mil|mín|mult|Mús)\.\s?</beforebreak>
 <afterbreak></afterbreak>
 </rule>
 <rule break="no">
-<beforebreak>\b(n|N|Náut|N.B|neg|neol|num|núm)\.\s?</beforebreak>
+<beforebreak>\b(n|N|Náut|N.B|neg|neol|nov|num|núm)\.\s?</beforebreak>
 <afterbreak></afterbreak>
 </rule>
 <rule break="no">
-<beforebreak>\b(ord)\.\s?</beforebreak>
+<beforebreak>\b(ord|out)\.\s?</beforebreak>
 <afterbreak></afterbreak>
 </rule>
 <rule break="no">
@@ -6068,7 +6098,7 @@
 <afterbreak></afterbreak>
 </rule>
 <rule break="no">
-<beforebreak>\b(S|S.A|símb|S. ?M|[Ss]ra?s?|[Ss]rta|suf|superl)\.\s?</beforebreak>
+<beforebreak>\b(S|S.A|set|símb|S. ?M|[Ss]ra?s?|[Ss]rta|suf|superl)\.\s?</beforebreak>
 <afterbreak></afterbreak>
 </rule>
 <rule break="no">
@@ -6090,7 +6120,7 @@
 <!-- s. XIX; s.IX; sec. XX; séc. XX -->
 <rule break="no">
 <beforebreak>\bs([eé]c)?\.\s?</beforebreak>
-<afterbreak>[IVXVDMCL]+</afterbreak>
+<afterbreak>[IVXDMCL]+</afterbreak>
 </rule>
 <!-- English abbreviations - but these work globally for all languages -->
 <rule break="no">
