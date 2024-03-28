@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    srx-languagetool (0.12.0)
+    srx-languagetool (0.13.0)
       srx (< 1.0)
 
 GEM
