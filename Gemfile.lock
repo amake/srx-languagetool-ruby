@@ -21,7 +21,7 @@ GEM
       kramdown (~> 2.0)
     language_server-protocol (3.17.0.3)
     minitest (5.22.3)
-    nokogiri (1.15.6-x86_64-darwin)
+    nokogiri (1.16.3-x86_64-darwin)
       racc (~> 1.4)
     parallel (1.24.0)
     parser (3.3.0.5)
@@ -80,6 +80,7 @@ PLATFORMS
   x86_64-darwin-20
   x86_64-darwin-21
   x86_64-darwin-22
+  x86_64-darwin-23
 
 DEPENDENCIES
   byebug
@@ -91,4 +92,4 @@ DEPENDENCIES
   srx-languagetool!
 
 BUNDLED WITH
-   2.4.10
+   2.5.7
