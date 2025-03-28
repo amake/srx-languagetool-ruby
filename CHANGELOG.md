@@ -1,5 +1,9 @@
 ## [Unreleased]
 
+## [0.15.0] - 2025-03-29
+
+- Update rules to LanguageTool 6.6
+
 ## [0.14.0] - 2024-09-27
 
 - Update rules to LanguageTool 6.5
